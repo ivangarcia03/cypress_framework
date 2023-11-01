@@ -237,6 +237,11 @@ describe('Cypress Assertions', () => {
             cy.wrap($el).find('label').should('have.text', boxes[index])
             cy.wrap($el).find('input').should('be.visible').and('be.enabled')
         })
+
+
     })
+
+
+
 
 })
