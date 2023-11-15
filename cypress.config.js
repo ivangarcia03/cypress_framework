@@ -31,5 +31,3 @@ module.exports = defineConfig({
   },
 });
 
-const registerCypressGrep = require('@cypress/grep')
-registerCypressGrep()
