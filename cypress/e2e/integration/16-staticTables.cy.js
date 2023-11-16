@@ -17,8 +17,7 @@ describe("Static Tables", () => {
 
   const tablesPage = new TablesPage()
 
-  it("Verify the headers of the table", function() {
-   
+  it("Verify the headers of the table", { tags: ["@smoke", "@regression"] }, function() {
     cy.clickCard("Tables");
 
     tablesPage.getCompanyTableHeaders().find('th').each(($txt, index) => {
