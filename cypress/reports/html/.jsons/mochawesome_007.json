@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-11-16T02:03:16.383Z",
+    "end": "2023-11-16T02:03:20.122Z",
+    "duration": 3739,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d054d64d-52e8-4c1b-bbac-1e26e454b1ae",
+      "title": "",
+      "fullFile": "cypress\\e2e\\integration\\08-Alerts.cy.js",
+      "file": "cypress\\e2e\\integration\\08-Alerts.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "06b38504-bda6-4135-87d0-244c173a3fbb",
+          "title": "Alerts",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Handling the Warning Alerts",
+              "fullTitle": "Alerts Handling the Warning Alerts",
+              "timedOut": null,
+              "duration": 1764,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\integration\\\\08-Alerts.cy.js\"\n}",
+              "code": "cy.visit(\"https://techglobal-training.com/frontend\");\ncy.clickCard(\"Alerts\");\ncy.on(\"window:alert\", str => {\n  console.log(\"My warning alert text content is :\" + str);\n  expect(str).to.equal('You are on TechGlobal Training application.');\n});\ncy.get(\"#warning_alert\").click();\ncy.get('#action').should('have.text', 'You accepted warning by clicking OK.');",
+              "err": {},
+              "uuid": "06a90416-80f3-4db7-8457-05d6513edd7f",
+              "parentUUID": "06b38504-bda6-4135-87d0-244c173a3fbb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Handling the Confirmation Alert",
+              "fullTitle": "Alerts Handling the Confirmation Alert",
+              "timedOut": null,
+              "duration": 958,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\integration\\\\08-Alerts.cy.js\"\n}",
+              "code": "cy.visit(\"https://techglobal-training.com/frontend\");\ncy.clickCard(\"Alerts\");\ncy.get(\"#confirmation_alert\").click();\ncy.once('window:confirm', str => {\n  console.log(str);\n  expect(str).to.equal('Would you like to stay on TechGlobal Training application?');\n  return false;\n});\ncy.get('#action').should('have.text', 'You rejected the alert by clicking Cancel.');\ncy.get(\"#confirmation_alert\").click();\ncy.get('#action').should('have.text', 'You confirmed the alert by clicking OK.');",
+              "err": {},
+              "uuid": "5173b866-90f3-4733-a287-6c9fc1db37f0",
+              "parentUUID": "06b38504-bda6-4135-87d0-244c173a3fbb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Handling alerts - Prompt alert",
+              "fullTitle": "Alerts Handling alerts - Prompt alert",
+              "timedOut": null,
+              "duration": 904,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\integration\\\\08-Alerts.cy.js\"\n}",
+              "code": "cy.visit(\"https://techglobal-training.com/frontend\");\ncy.clickCard(\"Alerts\");\n// Clicking the \"Cancel\" in prompt Alert\n// cy.window().then((win) => {\n//   cy.stub(win, 'prompt').returns(null)\n// })\n//Another way of Clicking the \"Cancel\" in prompt Alert\n// cy.window().then((win) => {\n//   cy.stub(win, 'prompt')\n//   return false\n// })\n// Clicking the \"Okay\" by entering text in prompt Alert\n// cy.window().then((win) => {\n//   cy.stub(win, 'prompt').returns('TechGlobal my Text here')\n// })\ncy.window().then(win => {\n  cy.stub(win, 'prompt').callsFake(message => {\n    console.log(message);\n    return message;\n  });\n});\ncy.get('#prompt_alert').click();",
+              "err": {},
+              "uuid": "2bc66e1a-f9bf-4830-a77a-f323cd60957e",
+              "parentUUID": "06b38504-bda6-4135-87d0-244c173a3fbb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "06a90416-80f3-4db7-8457-05d6513edd7f",
+            "5173b866-90f3-4733-a287-6c9fc1db37f0",
+            "2bc66e1a-f9bf-4830-a77a-f323cd60957e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3626,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "My Regression Results",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

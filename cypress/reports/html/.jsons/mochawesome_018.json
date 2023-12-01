@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-11-16T02:04:48.344Z",
+    "end": "2023-11-16T02:04:51.905Z",
+    "duration": 3561,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fc7b2050-71b4-4912-88b4-5dbf6cf9d4d6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\integration\\assertionsPractices.cy.js",
+      "file": "cypress\\e2e\\integration\\assertionsPractices.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "12530db6-2dc7-4146-b327-bd4f8ad5af17",
+          "title": "Practices",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Implicity Assertions PRactice",
+              "fullTitle": "Practices Implicity Assertions PRactice",
+              "timedOut": null,
+              "duration": 1761,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\integration\\\\assertionsPractices.cy.js\"\n}",
+              "code": "cy.visit('https://techglobal-training.com/frontend');\ncy.get('.cards').contains('Html Elements').click();\n/**\n* 1. Go to 'https://techglobal-training.com/frontend'\n* 2. Click on the 'Html Elements' card\n* 3. From the Paragraphs heading\n* 4. Validate Hello World and I Like automation testing! texts are visible\n* 5. Validate their texts are equal to expected texts\n* 6. Validate their id and value\n*/\ncy.get('#hello_paragraph').should('be.visible').and('have.text', 'Hello World!').and('have.attr', 'id', 'hello_paragraph');\ncy.get('#testing_paragraph').should('be.visible').and('have.text', 'I like automation testing!').and('have.attr', 'id', 'testing_paragraph');\n/**\n* 1. Go to 'https://techglobal-training.com/frontend'\n* 2. Click on the 'Html Elements' card\n* 3. From the \"Buttons\" section\n* 4. Validate \"Register\" and \"Signin\" buttons are visible\n* 5. Validate their texts are equal \"Register\" and \"Signin\"\n* 6. Validate both buttons are enabled\n*/\ncy.get(\"#register_button\").should(\"be.visible\").and(\"be.enabled\").and(\"have.text\", \"Register\");\ncy.get(\"#signin_button\").should(\"be.visible\").and(\"be.enabled\").and(\"have.text\", \"Sign in\");\n/**\n * 1. Go to 'https://techglobal-training.com/frontend'\n * 2. Click on the 'Html Elements' card\n * 3. From the \"Ordered Lists\" section\n * 4. Validate \"Ordered Lists\" heading text is visible and its equal to \"Ordered Lists\"\n * 5. Validate \"Cypress\" and \"Selenium Webdriver\" texts are visible\n * 6. Validate their texts are equal \"Cypress\" and \"Selenium Webdriver\"\n */\ncy.get(\"#ordered_list\").prev().should(\"be.visible\").and(\"have.text\", \"Ordered Lists\").next().find(\"#ordered_list_item1\").should(\"be.visible\").and(\"have.text\", \"Cypress\").next().should(\"be.visible\").and(\"have.text\", \"Selenium Webdriver\");\n/**\n* 1. Go to 'https://techglobal-training.com/frontend'\n* 2. Click on the 'Html Elements' card\n* 3. From the \"Links\" section\n* 4. Validate \"Links\" heading text is visible and its equal to \"Links\"\n* 5. Validate \"Facebook\" and \"Instagram\" anchor tags are visible\n* 6. Validate \"Facebook\" and \"Instagram\" anchor tags are enabled\n* 6. Validate \"Facebook\" and \"Instagram\" anchor tags has \"href\" attribute\n* 6. Validate their texts are equal \"Facebook\" and \"Instagram\"\n*/\ncy.get(\"#facebook_link\").prev().should(\"be.visible\").and(\"have.text\", \"Links\");\ncy.get(\"#facebook_link\").should(\"be.visible\").and(\"have.attr\", \"href\", \"https://www.facebook.com/techglobaleducation\").and(\"have.text\", \"Facebook\");\ncy.get(\"#facebook_link\").prev().should(\"be.visible\").and(\"have.text\", \"Links\");\ncy.get(\"#instagram_link\").should(\"be.visible\").and(\"have.attr\", \"href\", \"https://www.instagram.com/techglobal.school/?hl=en\").and(\"have.text\", \"Instagram\");\n/**\n* 1. Go to 'https://techglobal-training.com/frontend'\n* 2. Click on the 'Html Elements' card\n* 3. From the \"Checkboxes\" section\n* 4. Validate \"Tesla\" checkbox text is equal to \"Tesla\"\n* 5. Validate \"Tesla\" checkbox is enabled\n* 6. Validate \"Tesla\" checkbox is not checked\n* 7. Check on \"Tesla\" checkbox\n* 8. Validate its checked\n*/\ncy.get(\"#tesla_check\").should(\"have.text\", \"Tesla\").prev().and(\"be.enabled\").and(\"be.not.checked\").check().and(\"be.checked\");",
+              "err": {},
+              "uuid": "1f2e9223-6225-4b2e-b21c-069c2cc81dba",
+              "parentUUID": "12530db6-2dc7-4146-b327-bd4f8ad5af17",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Practice 2",
+              "fullTitle": "Practices Practice 2",
+              "timedOut": null,
+              "duration": 1544,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\integration\\\\assertionsPractices.cy.js\"\n}",
+              "code": "/**\n* Test Case: Validate Dropdowns Functionality on TechGlobal Training Page\n* Go to https://techglobal-training.com/frontend\n* Select the \"Dropdowns\" card\n* Select the \"MacBook Pro 13\" option from the \"Product\" dropdown.\n* Select the \"Green\" option from the \"Color\" dropdown.\n* Open the \"Shipping\" dropdown and click on the \"Delivery\" option.\n* Click on the \"Submit\" button.\n* Validate result message displays \"Your Green MacBook Pro 13 will be delivered to you.\"\n*/\ncy.visit(\"https://techglobal-training.com/frontend\");\ncy.get(\".cards\").contains(\"Dropdowns\").click();\nconst product = 'MacBook Pro 13';\nconst color = 'Green';\nconst shippingOption = \"Delivery\";\nconst expectedMessage = shippingOption === 'Delivery' ? `Your ${color} ${product} will be delivered to you.` : `Your ${color} ${product} is ready to be picked up.`;\ncy.get('#product_dropdown').select(product);\ncy.get('#color_dropdown').select(color);\ncy.get('.react-dropdown-select-content').click();\ncy.get(`[aria-label=\"${shippingOption}\"]`).click();\ncy.get('#submit').click();\ncy.get('#result').should('have.text', expectedMessage);",
+              "err": {},
+              "uuid": "89c82253-4237-4909-b44e-28ec92042968",
+              "parentUUID": "12530db6-2dc7-4146-b327-bd4f8ad5af17",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1f2e9223-6225-4b2e-b21c-069c2cc81dba",
+            "89c82253-4237-4909-b44e-28ec92042968"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3305,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "My Regression Results",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-11-16T02:03:42.858Z",
+    "end": "2023-11-16T02:03:55.363Z",
+    "duration": 12505,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bbac0e24-cefc-4ba5-b77f-4cbbe36426db",
+      "title": "",
+      "fullFile": "cypress\\e2e\\integration\\12-timeout.cy.js",
+      "file": "cypress\\e2e\\integration\\12-timeout.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "02b59e36-4bec-43c8-b5c7-30a03a6a3607",
+          "title": "Timeouts",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Explicit or Inline Timeouts",
+              "fullTitle": "Timeouts Explicit or Inline Timeouts",
+              "timedOut": null,
+              "duration": 1403,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\integration\\\\12-timeout.cy.js\"\n}",
+              "code": "cy.visit(\"https://techglobal-training.com/frontend\");\ncy.clickCard(\"Html Elements\");\n// cy.get('#randomName', {timeout: 8000})\ncy.get(\"#main_heading\", {\n  timeout: 10000\n});\ncy.get('#hello_paragraph', {\n  timeout: 10000\n}).click({\n  timeout: 7000,\n  force: true\n});",
+              "err": {},
+              "uuid": "8ca9a4c0-f6d5-4135-ba13-89b229c85e4d",
+              "parentUUID": "02b59e36-4bec-43c8-b5c7-30a03a6a3607",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Waits Page",
+              "fullTitle": "Timeouts Waits Page",
+              "timedOut": null,
+              "duration": 11008,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\integration\\\\12-timeout.cy.js\"\n}",
+              "code": "cy.visit(\"https://techglobal-training.com/frontend\", {\n  timeout: 10000\n});\ncy.clickCard(\"Waits\");\ncy.get('#red').click();\ncy.get('.box', {\n  timeout: 10000\n}).should('be.visible');",
+              "err": {},
+              "uuid": "149de971-66fa-46c0-b6a2-f500c331fb70",
+              "parentUUID": "02b59e36-4bec-43c8-b5c7-30a03a6a3607",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8ca9a4c0-f6d5-4135-ba13-89b229c85e4d",
+            "149de971-66fa-46c0-b6a2-f500c331fb70"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12411,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "My Regression Results",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

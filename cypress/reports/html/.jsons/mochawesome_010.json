@@ -1,0 +1,114 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-11-16T02:03:37.277Z",
+    "end": "2023-11-16T02:03:38.366Z",
+    "duration": 1089,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "17ab4d59-9050-4cf8-b4ea-5c6ddfa13c0f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\integration\\11-CustomCommands.cy.js",
+      "file": "cypress\\e2e\\integration\\11-CustomCommands.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "159638f5-fc18-4432-a72c-7de9fac893eb",
+          "title": "Custom Commands",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Project",
+              "fullTitle": "Custom Commands Project",
+              "timedOut": null,
+              "duration": 992,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\integration\\\\11-CustomCommands.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\11-CustomCommands.cy.js\\\\Custom Commands -- Project (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.visit(\"https://techglobal-training.netlify.app/frontend/project-1\");\n/**\n * Validate the options are “Female”, “Male” and “Prefer not to disclose”\n * Click on the “Male” option and validate it is selected while the others are not selected\n * Click on the “Female” option and validate it is selected while the others are not selected\n */\nconst expectedText = [\"Male\", \"Female\", \"Prefer not to disclose\"];\ncy.get(\".control > .radio\").each(($el, index) => {\n  cy.wrap($el).should(\"have.text\", expectedText[index]);\n});\n// cy.contains('Male').find('input').check().should('be.checked')\n// cy.contains('Female').find('input').should('not.be.checked')\n// cy.contains('Prefer not to disclose').find('input').should('not.be.checked')\n// cy.contains('Female').find('input').check().should('be.checked')\n// cy.contains('Male').find('input').should('not.be.checked')\n// cy.contains('Prefer not to disclose').find('input').should('not.be.checked')\ncy.checkOptionValidateOthers(\"Male\", expectedText);\ncy.checkOptionValidateOthers(\"Female\", expectedText);",
+              "err": {
+                "message": "TypeError: cy.checkOptionValidateOthers is not a function",
+                "estack": "TypeError: cy.checkOptionValidateOthers is not a function\n    at Context.eval (webpack://cypress_framework/./cypress/e2e/integration/11-CustomCommands.cy.js:52:9)",
+                "diff": null
+              },
+              "uuid": "ca0576d4-db0e-45a3-987f-a7a9aa40e2c1",
+              "parentUUID": "159638f5-fc18-4432-a72c-7de9fac893eb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "ca0576d4-db0e-45a3-987f-a7a9aa40e2c1"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 992,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "My Regression Results",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

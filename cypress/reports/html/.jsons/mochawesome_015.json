@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-11-16T02:04:24.144Z",
+    "end": "2023-11-16T02:04:25.373Z",
+    "duration": 1229,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "39dd93d2-bfba-4f55-a321-728d5d73f3b9",
+      "title": "",
+      "fullFile": "cypress\\e2e\\integration\\16-staticTables.cy.js",
+      "file": "cypress\\e2e\\integration\\16-staticTables.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a225b047-e17a-4a01-8b68-0c4cc0f85611",
+          "title": "Static Tables",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the headers of the table",
+              "fullTitle": "Static Tables Verify the headers of the table",
+              "timedOut": null,
+              "duration": 1148,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\integration\\\\16-staticTables.cy.js\"\n}",
+              "code": "cy.clickCard(\"Tables\");\ntablesPage.getCompanyTableHeaders().find('th').each(($txt, index) => {\n  cy.wrap($txt).should('have.text', this.headers[index]);\n});",
+              "err": {},
+              "uuid": "f6aa1df6-4e35-47c8-9ac9-1edfda2899a0",
+              "parentUUID": "a225b047-e17a-4a01-8b68-0c4cc0f85611",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f6aa1df6-4e35-47c8-9ac9-1edfda2899a0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1148,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "My Regression Results",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

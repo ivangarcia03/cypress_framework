@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-11-16T02:02:22.960Z",
+    "end": "2023-11-16T02:02:24.594Z",
+    "duration": 1634,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e182eff4-0925-4fa6-ac8c-e87f037b77a7",
+      "title": "",
+      "fullFile": "cypress\\e2e\\integration\\03-Selectos.cy.js",
+      "file": "cypress\\e2e\\integration\\03-Selectos.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "06832490-4ca3-41c9-8b77-f21c199bf97e",
+          "title": "Cypress Selectors",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Practice Web Eelements using - next(), prev(), nextAll(), prevAll()",
+              "fullTitle": "Cypress Selectors Practice Web Eelements using - next(), prev(), nextAll(), prevAll()",
+              "timedOut": null,
+              "duration": 1557,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\integration\\\\03-Selectos.cy.js\"\n}",
+              "code": "cy.visit('https://techglobal-training.com/frontend');\ncy.contains('.cards', 'Html Elements').click();\n// next()  => locates the immediate next sibling of a web element\ncy.get('div').contains('Paragraphs').next().next();\n// nextAll()  => this will locate ALL next immediate siblings\ncy.get('div').contains('Paragraphs').nextAll();\n// prev()  => locates the immediate previous sibling of a web element\ncy.get('#testing_paragraph').prev();\n// prevAll()  => this will locate ALL previous immediate siblings\ncy.get('#testing_paragraph').prevAll();\ncy.get('#checkbox-button-group').next().find('div').first().find('input').parent().parent().parent().prev();",
+              "err": {},
+              "uuid": "29bef24e-653e-4332-9d87-9a573820e3ef",
+              "parentUUID": "06832490-4ca3-41c9-8b77-f21c199bf97e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "29bef24e-653e-4332-9d87-9a573820e3ef"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1557,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "My Regression Results",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
