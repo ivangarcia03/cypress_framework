@@ -24,7 +24,7 @@ describe('Mock test case', () =>{
     const labels = ["Pagination", "World City Populations 2022", "What are the most populated cities in the world? Here is a list of the top five most populated cities in the world:"]
     
     cy.get('.is-size-3, #sub_heading, #content').each((el, index) =>{
-        cy.wrap(el).should('have.text', labels[index]).should('be.visible')
+        cy.wrap(el).should('have.text', labels[index]).and('be.visible')
     })
 
     })
